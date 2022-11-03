@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: krateo-system
+---
+apiVersion: argocd.krateo.io/v1alpha1
+kind: Endpoint
+metadata:
+  name: argocd-endpoint
+spec:
+  forProvider:
+    account: krateo-dashboard
+    writeSecretToRef:
+      name: argocd-endpoint
+      namespace: krateo-system
+  providerConfigRef:
+    name: provider-argocd-endpoint-config

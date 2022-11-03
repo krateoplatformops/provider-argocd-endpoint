@@ -1,0 +1,13 @@
+apiVersion: meta.pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-argocd-endpoint
+  annotations:
+    # A one sentence description of the package.
+    meta.crossplane.io/description: |
+      The Krateo PlatformOps ArgoCD provider enables creation of ArgoCD accounts tokens.
+    # A 'human-friendly' name for this package.
+    friendly-name.meta.crossplane.io: "Krateo PlatformOps ArgoCD Endpoint Provider"
+spec:
+  controller:
+    image: ghcr.io/krateoplatformops/provider-argocd-endpoint-controller:VERSION

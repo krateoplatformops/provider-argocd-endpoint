@@ -1,0 +1,13 @@
+apiVersion: argocd.krateo.io/v1alpha1
+kind: ProviderConfig
+metadata:
+  name: provider-argocd-endpoint-config
+spec:
+  #serverUrl: https://argocd-server.argo-system.svc:443
+  serverUrl: https://localhost:8080
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: argo-system
+      name: argocd-initial-admin-secret
+      key: password
