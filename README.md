@@ -1,4 +1,4 @@
-# Provider ArgoCD
+# Provider ArgoCD Endpoint
 
 ## Overview
 
